@@ -1,3 +1,4 @@
+/*
 package com.example.helloworld;
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
@@ -23,3 +24,4 @@ public class MainActivityTest {
                 .check(matches(withText("Tim Lytvynchuk 4/11/2021")));
     }
 }
+*/
