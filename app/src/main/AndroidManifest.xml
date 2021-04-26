@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
+        android:requestLegacyExternalStorage="true"
         <activity android:name=".LoggedIn"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".Signup_Form">
@@ -19,5 +20,8 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
 </manifest>
