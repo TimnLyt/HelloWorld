@@ -20,7 +20,9 @@ import java.util.Calendar;
 public class Signup_Form extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
     private Button button;
     private EditText text_input_name, text_input_occupation, text_input_description;
-    private Button  birthday;
+    private Button birthday;
+    private TextView birthdayText;
+    private EditText text_input_username;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -30,8 +32,9 @@ public class Signup_Form extends AppCompatActivity implements DatePickerDialog.O
         text_input_name = findViewById(R.id.text_input_name);
         text_input_occupation = findViewById(R.id.text_input_occupation);
         text_input_description = findViewById(R.id.text_input_description);
+        text_input_username = findViewById(R.id.text_input_username);
 
-        birthday = findViewById(R.id.birthday);
+        birthdayText = findViewById(R.id.birthdayText);
 
         button = findViewById(R.id.button);
         getSupportActionBar().setTitle("Dating Profile Signup Form");
@@ -39,15 +42,17 @@ public class Signup_Form extends AppCompatActivity implements DatePickerDialog.O
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = text_input_name.getText().toString();
+                String name = text_input_name.getText().toString();
                 String occupation = text_input_occupation.getText().toString();
                 String description = text_input_description.getText().toString();
-                String age = birthday.getText().toString();
+                String username = text_input_username.getText().toString();
+                String age = birthdayText.getText().toString();
 
                 Intent intent = new Intent(Signup_Form.this,LoggedIn.class);
-                intent.putExtra("keyname",username);
+                intent.putExtra("keyname",name);
                 intent.putExtra("keyoccupation",occupation);
                 intent.putExtra("keydescription",description);
+                intent.putExtra("keyusername",username);
                 intent.putExtra("keyage",age);
                 startActivity(intent);
             }
