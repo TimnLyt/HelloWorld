@@ -24,8 +24,10 @@ import java.util.regex.Pattern;
 
 public class Signup_Form extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
     private Button button;
-    private EditText text_input_name;
-
+    private EditText text_input_name, text_input_occupation, text_input_description;
+    private Button birthday;
+    private TextView birthdayText;
+    private EditText text_input_username;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -33,17 +35,33 @@ public class Signup_Form extends AppCompatActivity implements DatePickerDialog.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup__form);
         text_input_name = findViewById(R.id.text_input_name);
+        text_input_occupation = findViewById(R.id.text_input_occupation);
+        text_input_description = findViewById(R.id.text_input_description);
+        text_input_username = findViewById(R.id.text_input_username);
 
+<<<<<<< HEAD
+=======
+        birthdayText = findViewById(R.id.birthdayText);
+
+>>>>>>> edfba69d45df536ca9961dc0c91095a36d19e098
         button = findViewById(R.id.button);
-        getSupportActionBar().setTitle("Signup Form");
+        getSupportActionBar().setTitle("Dating Profile Signup Form");
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = text_input_name.getText().toString();
+                String name = text_input_name.getText().toString();
+                String occupation = text_input_occupation.getText().toString();
+                String description = text_input_description.getText().toString();
+                String username = text_input_username.getText().toString();
+                String age = birthdayText.getText().toString();
 
                 Intent intent = new Intent(Signup_Form.this,LoggedIn.class);
-                intent.putExtra( "keyname",username);
+                intent.putExtra("keyname",name);
+                intent.putExtra("keyoccupation",occupation);
+                intent.putExtra("keydescription",description);
+                intent.putExtra("keyusername",username);
+                intent.putExtra("keyage",age);
                 startActivity(intent);
             }
         });
@@ -69,6 +87,7 @@ public class Signup_Form extends AppCompatActivity implements DatePickerDialog.O
         TextView textView = (TextView) findViewById(R.id.birthdayText);
         textView.setText(currentDateString);
     }
+
 
     @Override
     protected void onRestart() {
