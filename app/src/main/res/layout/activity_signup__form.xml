@@ -102,7 +102,7 @@
             android:textSize="20sp"
             android:textColor="#ffffff"
             android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_button"
+            android:background="@color/purple_500"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -145,7 +145,7 @@
         android:textSize="20sp"
         android:textColor="#ffffff"
         android:layout_marginTop="40dp"
-        android:background="@drawable/rounded_button"
+        android:background="@color/purple_500"
         />
 
     <TextView

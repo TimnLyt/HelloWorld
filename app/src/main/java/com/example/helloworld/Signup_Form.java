@@ -5,17 +5,22 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 import java.text.DateFormat;
 import java.util.Calendar;
+import java.util.regex.Pattern;
 
 public class Signup_Form extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
     private Button button;
@@ -28,8 +33,6 @@ public class Signup_Form extends AppCompatActivity implements DatePickerDialog.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup__form);
         text_input_name = findViewById(R.id.text_input_name);
-
-
 
         button = findViewById(R.id.button);
         getSupportActionBar().setTitle("Signup Form");
