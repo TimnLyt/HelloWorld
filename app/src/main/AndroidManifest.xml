@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
         <activity android:name=".LoggedIn" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".Signup_Form">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

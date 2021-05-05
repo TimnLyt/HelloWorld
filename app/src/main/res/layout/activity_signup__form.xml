@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/background"
         android:orientation="vertical"
         android:padding="30dp"
         tools:context=".Signup_Form">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:tabTextColor="@color/white"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="387dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -190,13 +203,8 @@
             android:text="Register"
             android:textSize="20sp"
             android:textColor="#ffffff"
-<<<<<<< HEAD
             android:layout_marginTop="5dp"
             android:background="@color/purple_500"
-=======
-            android:layout_marginTop="40dp"
-            android:background="@drawable/rounded_button"
->>>>>>> edfba69d45df536ca9961dc0c91095a36d19e098
             />
 
         <TextView
@@ -207,32 +215,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/HelloWorldText" />
-
-<<<<<<< HEAD
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:textSize="20sp"
-        android:textColor="#ffffff"
-        android:layout_marginTop="40dp"
-        android:background="@color/purple_500"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tim Lytvynchuk 4/17/2021"
-        android:layout_gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/HelloWorldText" />
-
-</LinearLayout>
-=======
+            app:layout_constraintTop_toTopOf="@+id/HelloWorldText"
+            />
     </LinearLayout>
 </ScrollView>
->>>>>>> edfba69d45df536ca9961dc0c91095a36d19e098
