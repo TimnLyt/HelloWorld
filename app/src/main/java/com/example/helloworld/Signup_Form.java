@@ -5,22 +5,26 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Patterns;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
-import com.google.android.material.textfield.TextInputLayout;
+import com.example.helloworld.main.SectionsPagerAdapter;
+import com.google.android.material.tabs.TabLayout;
 
 import java.text.DateFormat;
 import java.util.Calendar;
-import java.util.regex.Pattern;
 
 public class Signup_Form extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
     private Button button;
@@ -34,16 +38,18 @@ public class Signup_Form extends AppCompatActivity implements DatePickerDialog.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup__form);
+        ViewPager viewPager = findViewById(R.id.view_pager);
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        viewPager.setAdapter(sectionsPagerAdapter);
+        TabLayout tabs = findViewById(R.id.tabs);
+        tabs.setupWithViewPager(viewPager);
         text_input_name = findViewById(R.id.text_input_name);
         text_input_occupation = findViewById(R.id.text_input_occupation);
         text_input_description = findViewById(R.id.text_input_description);
         text_input_username = findViewById(R.id.text_input_username);
 
-<<<<<<< HEAD
-=======
         birthdayText = findViewById(R.id.birthdayText);
 
->>>>>>> edfba69d45df536ca9961dc0c91095a36d19e098
         button = findViewById(R.id.button);
         getSupportActionBar().setTitle("Dating Profile Signup Form");
 
