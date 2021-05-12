@@ -1,7 +1,6 @@
 package com.example.helloworld;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -41,11 +40,6 @@ public class LoggedIn extends AppCompatActivity {
         text_input_username.setText(username);
         birthdayText.setText(age);
 
-        goBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        goBack.setOnClickListener(v -> finish());
     }
 }

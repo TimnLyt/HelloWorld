@@ -5,19 +5,13 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.helloworld.main.SectionsPagerAdapter;
@@ -48,37 +42,32 @@ public class Signup_Form extends AppCompatActivity implements DatePickerDialog.O
         text_input_description = findViewById(R.id.text_input_description);
         text_input_username = findViewById(R.id.text_input_username);
 
+
         birthdayText = findViewById(R.id.birthdayText);
 
         button = findViewById(R.id.button);
         getSupportActionBar().setTitle("Dating Profile Signup Form");
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String name = text_input_name.getText().toString();
-                String occupation = text_input_occupation.getText().toString();
-                String description = text_input_description.getText().toString();
-                String username = text_input_username.getText().toString();
-                String age = birthdayText.getText().toString();
+        button.setOnClickListener(v -> {
+            String name = text_input_name.getText().toString();
+            String occupation = text_input_occupation.getText().toString();
+            String description = text_input_description.getText().toString();
+            String username = text_input_username.getText().toString();
+            String age = birthdayText.getText().toString();
 
-                Intent intent = new Intent(Signup_Form.this,LoggedIn.class);
-                intent.putExtra("keyname",name);
-                intent.putExtra("keyoccupation",occupation);
-                intent.putExtra("keydescription",description);
-                intent.putExtra("keyusername",username);
-                intent.putExtra("keyage",age);
-                startActivity(intent);
-            }
+            Intent intent = new Intent(Signup_Form.this,LoggedIn.class);
+            intent.putExtra("keyname",name);
+            intent.putExtra("keyoccupation",occupation);
+            intent.putExtra("keydescription",description);
+            intent.putExtra("keyusername",username);
+            intent.putExtra("keyage",age);
+            startActivity(intent);
         });
 
         Button button = (Button) findViewById(R.id.birthday);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DialogFragment datePicker = new DatePickerFragment();
-                datePicker.show(getSupportFragmentManager(), "date picker");
-            }
+        button.setOnClickListener(v -> {
+            DialogFragment datePicker = new DatePickerFragment();
+            datePicker.show(getSupportFragmentManager(), "date picker");
         });
     }
 
