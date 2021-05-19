@@ -1,6 +1,7 @@
 package com.example.helloworld;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,5 +52,6 @@ public class Frag2 extends Fragment {
         });
 
         return view;
+
     }
 }

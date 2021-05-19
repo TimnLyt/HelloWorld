@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -83,6 +84,10 @@ public class Signup_Form extends AppCompatActivity implements DatePickerDialog.O
         textView.setText(currentDateString);
     }
 
+    public void goToSimpleFirebaseExample(View view) {
+        Intent intent = new Intent(Signup_Form.this, SimpleFirebaseExample.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onRestart() {
