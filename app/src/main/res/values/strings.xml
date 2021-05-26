@@ -3,4 +3,10 @@
     <string name="tab_text_1">Profile</string>
     <string name="tab_text_2">Matches</string>
     <string name="tab_text_3">Settings</string>
+    <string name="gender_preference">Gender Preference</string>
+    <string name="Male">Male</string>
+    <string name="female">Female</string>
+    <string name="settings">SETTINGS</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="preferred_age">Preferred Age</string>
 </resources>
