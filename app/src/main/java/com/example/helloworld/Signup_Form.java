@@ -87,6 +87,7 @@ public class Signup_Form extends AppCompatActivity implements DatePickerDialog.O
                 intent.putExtra("keyoccupation",occupation);
                 intent.putExtra("keydescription",description);
                 intent.putExtra("keyusername",username);
+                intent.putExtra("keyemail",email);
                 intent.putExtra("keyage",age);
                 startActivity(intent);
             }
