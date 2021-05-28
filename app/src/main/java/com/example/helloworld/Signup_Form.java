@@ -33,11 +33,6 @@ public class Signup_Form extends AppCompatActivity implements DatePickerDialog.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup__form);
-        ViewPager viewPager = findViewById(R.id.view_pager);
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        viewPager.setAdapter(sectionsPagerAdapter);
-        TabLayout tabs = findViewById(R.id.tabs);
-        tabs.setupWithViewPager(viewPager);
         text_input_name = findViewById(R.id.text_input_name);
         text_input_occupation = findViewById(R.id.text_input_occupation);
         text_input_description = findViewById(R.id.text_input_description);
@@ -56,7 +51,7 @@ public class Signup_Form extends AppCompatActivity implements DatePickerDialog.O
             String username = text_input_username.getText().toString();
             String age = birthdayText.getText().toString();
 
-            Intent intent = new Intent(Signup_Form.this,LoggedIn.class);
+            Intent intent = new Intent(Signup_Form.this,activity_main.class);
             intent.putExtra("keyname",name);
             intent.putExtra("keyoccupation",occupation);
             intent.putExtra("keydescription",description);
