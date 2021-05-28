@@ -79,4 +79,40 @@ public class activity_signup__formTest {
         onView(withId(R.id.button)).perform(scrollTo(),(click()));
         onView(allOf(withId(R.id.text_input_description), hasErrorText("Enter Description")));
     }
+
+    @Test
+    public void nameTooLong() {
+        onView(withId(R.id.text_input_name)).perform(typeText("Timothy Nick Lytvynchuk"));
+        onView(withId(R.id.button)).perform(scrollTo(),(click()));
+        onView(allOf(withId(R.id.text_input_name), hasErrorText("Must be below 19 Char")));
+    }
+
+    @Test
+    public void usernameTooLong() {
+        onView(withId(R.id.text_input_username)).perform(typeText("Timothy Nick Lytvynchuk"));
+        onView(withId(R.id.button)).perform(scrollTo(),(click()));
+        onView(allOf(withId(R.id.text_input_username), hasErrorText("Must be below 15 Char")));
+    }
+
+    @Test
+    public void invalidEmail() {
+        onView(withId(R.id.text_input_email)).perform(typeText("Timothy"));
+        onView(withId(R.id.button)).perform(scrollTo(),(click()));
+        onView(allOf(withId(R.id.text_input_email), hasErrorText("Must be a valid email")));
+    }
+
+    @Test
+    public void occupationTooLong() {
+        onView(withId(R.id.text_input_occupation)).perform(typeText("This is a test for a long occupation"));
+        onView(withId(R.id.button)).perform(scrollTo(),(click()));
+        onView(allOf(withId(R.id.text_input_occupation), hasErrorText("Must be below 15 Char")));
+    }
+
+    @Test
+    public void descriptionTooLong() {
+        onView(withId(R.id.text_input_occupation)).perform(typeText("This is a test for a long description " +
+                "that goes way way way way way way way passed 75 characters"));
+        onView(withId(R.id.button)).perform(scrollTo(),(click()));
+        onView(allOf(withId(R.id.text_input_occupation), hasErrorText("Must be below 75 Char")));
+    }
 }
