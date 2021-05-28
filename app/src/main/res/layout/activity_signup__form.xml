@@ -20,6 +20,8 @@
             android:focusableInTouchMode="true"
             android:textColorHint="@color/hint"
             android:layout_marginTop="5dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="19"
             app:errorEnabled="true"
             >
 
@@ -85,6 +87,8 @@
             android:focusableInTouchMode="true"
             android:textColorHint="@color/hint"
             android:layout_marginTop="5dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="15"
             app:errorEnabled="true"
             >
 
@@ -106,6 +110,8 @@
             android:focusableInTouchMode="true"
             android:textColorHint="@color/hint"
             android:layout_marginTop="5dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="75"
             app:errorEnabled="true"
             >
 
