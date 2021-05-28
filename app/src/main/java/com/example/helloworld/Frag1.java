@@ -22,6 +22,7 @@ public class Frag1 extends Fragment {
         TextView text_input_occupation = (TextView) view.findViewById(R.id.text_occupation);
         TextView text_input_description = (TextView) view.findViewById(R.id.text_description);
         TextView text_input_username = (TextView) view.findViewById(R.id.text_username);
+        TextView text_input_email = (TextView) view.findViewById(R.id.text_email);
         TextView birthdayText = (TextView) view.findViewById(R.id.text_age);
 
 
@@ -29,12 +30,14 @@ public class Frag1 extends Fragment {
         String occupation = getActivity().getIntent().getStringExtra("keyoccupation");
         String description = getActivity().getIntent().getStringExtra("keydescription");
         String username = getActivity().getIntent().getStringExtra("keyusername");
+        String email = getActivity().getIntent().getStringExtra("keyemail");
         String age = getActivity().getIntent().getStringExtra("keyage");
 
         text_input_name.setText(name);
         text_input_occupation.setText(occupation);
         text_input_description.setText(description);
         text_input_username.setText(username);
+        text_input_email.setText(email);
         birthdayText.setText(age);
 
         Button goBack = (Button) view.findViewById(R.id.back_button);

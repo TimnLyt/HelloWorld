@@ -29,7 +29,7 @@ public class activity_signup__formTest {
             = new ActivityScenarioRule<>(Signup_Form.class);
 
     @Test
-    public void canSignup() throws InterruptedException {
+    public void canSignup() {
         onView(withId(R.id.text_input_name)).perform(typeText("Tim Lytvynchuk"));
         onView(withId(R.id.text_input_username)).perform(typeText("Timothy98"));
         onView(withId(R.id.text_input_email)).perform(typeText("Tim@gmail.com"));
@@ -38,11 +38,11 @@ public class activity_signup__formTest {
 
         onView(withId(R.id.button)).perform(scrollTo(),(click()));
 
-        onView(allOf(withId(R.id.text_input_name))).check(matches(withText("Tim Lytvynchuk")));
-        onView(allOf(withId(R.id.text_input_username))).check(matches(withText("Timothy98")));
-        onView(allOf(withId(R.id.text_input_email))).check(matches(withText("Tim@gmail.com")));
-        onView(allOf(withId(R.id.text_input_occupation))).check(matches(withText("CS")));
-        onView(allOf(withId(R.id.text_input_description))).check(matches(withText("I love to hike")));
+        onView(allOf(withId(R.id.text_name))).check(matches(withText("Tim Lytvynchuk")));
+        onView(allOf(withId(R.id.text_username))).check(matches(withText("Timothy98")));
+        onView(allOf(withId(R.id.text_email))).check(matches(withText("Tim@gmail.com")));
+        onView(allOf(withId(R.id.text_occupation))).check(matches(withText("CS")));
+        onView(allOf(withId(R.id.text_description))).check(matches(withText("I love to hike")));
     }
 
     @Test
