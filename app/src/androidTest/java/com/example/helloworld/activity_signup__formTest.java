@@ -29,14 +29,8 @@ public class activity_signup__formTest {
             = new ActivityScenarioRule<>(Signup_Form.class);
 
     @Test
-    public void hasTextOnScreen() {
-        onView(withId(R.id.textView))
-                .check(matches(withText("Date:")));
-    }
-
-    @Test
     public void canSignup() throws InterruptedException {
-        onView(withId(R.id.text_input_name)).perform(typeText("Tim  Lytvynchuk"));
+        onView(withId(R.id.text_input_name)).perform(typeText("Tim Lytvynchuk"));
         onView(withId(R.id.text_input_username)).perform(typeText("Timothy98"));
         onView(withId(R.id.text_input_email)).perform(typeText("Tim@gmail.com"));
         onView(withId(R.id.text_input_occupation)).perform(typeText("CS"));
