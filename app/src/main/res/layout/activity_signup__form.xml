@@ -29,11 +29,11 @@
                 android:id="@+id/text_input_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter First and Last Name"
+                android:hint="@string/enter_first_and_last_name"
                 android:ems="10"
                 android:inputType="text"
                 android:textSize="20sp"
-                />
+                tools:ignore="Autofill" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -52,11 +52,11 @@
                 android:id="@+id/text_input_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Create Username"
+                android:hint="@string/create_username"
                 android:ems="10"
                 android:inputType="text"
                 android:textSize="20sp"
-                />
+                tools:ignore="Autofill" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -73,11 +73,11 @@
                 android:id="@+id/text_input_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"
+                android:hint="@string/email"
                 android:ems="10"
                 android:inputType="text"
                 android:textSize="20sp"
-                />
+                tools:ignore="Autofill,TextFields" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -96,11 +96,11 @@
                 android:id="@+id/text_input_occupation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Occupation"
+                android:hint="@string/occupation"
                 android:ems="10"
                 android:inputType="text"
                 android:textSize="20sp"
-                />
+                tools:ignore="Autofill" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -121,9 +121,9 @@
                 android:layout_height="88dp"
                 android:ems="10"
                 android:gravity="start|top"
-                android:hint="Description"
+                android:hint="@string/description"
                 android:inputType="textMultiLine"
-                />
+                tools:ignore="Autofill" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -140,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Date:"
+                android:text="@string/date"
                 android:textColorHint="@color/hint"
                 android:textSize="20sp"
                 />
@@ -149,7 +149,7 @@
                 android:id="@+id/birthday"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Birthday"
+                android:text="@string/birthday"
                 android:textSize="20sp"
                 android:textColor="#ffffff"
                 android:layout_marginTop="5dp"
@@ -166,23 +166,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gender:"
+                android:text="@string/gender"
                 android:textSize="20sp"
                 />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Male"
+                android:text="@string/male"
                 android:textSize="20sp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Female"
+                android:layout_marginStart="10dp"
+                android:text="@string/female"
                 android:textSize="20sp"
                 />
 
@@ -192,7 +192,7 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Register"
+            android:text="@string/register"
             android:textSize="20sp"
             android:textColor="#ffffff"
             android:layout_marginTop="5dp"
@@ -202,7 +202,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tim Lytvynchuk 4/24/2021"
+            android:text="@string/tim_lytvynchuk_4_24_2021"
             android:layout_gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"

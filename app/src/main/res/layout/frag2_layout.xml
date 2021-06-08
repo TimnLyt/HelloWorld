@@ -7,8 +7,7 @@
 
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -20,8 +19,7 @@
         android:id="@+id/title_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="MATCHES"
+        android:text="@string/matches"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="30sp"
@@ -31,7 +29,6 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/title_view"
         android:rowCount="3"
         android:columnCount="2"
         android:layout_margin="20dp"
@@ -68,7 +65,7 @@
 
                 <Button
                     android:id="@+id/Btn1"
-                    android:text="Like"
+                    android:text="@string/like"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:onClick="displayToast1"/>
@@ -102,13 +99,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Shy"
+                    android:text="@string/shy"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
 
                 <Button
                     android:id="@+id/Btn2"
-                    android:text="Like"
+                    android:text="@string/like"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:onClick="displayToast1"/>
@@ -141,13 +138,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Happy"
+                    android:text="@string/happy"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
 
                 <Button
                     android:id="@+id/Btn3"
-                    android:text="Like"
+                    android:text="@string/like"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:onClick="displayToast1"/>
@@ -180,13 +177,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Thoughtful"
+                    android:text="@string/thoughtful"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
 
                 <Button
                     android:id="@+id/Btn4"
-                    android:text="Like"
+                    android:text="@string/like"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:onClick="displayToast1"/>
@@ -219,13 +216,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Annoyed"
+                    android:text="@string/annoyed"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
 
                 <Button
                     android:id="@+id/Btn5"
-                    android:text="Like"
+                    android:text="@string/like"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:onClick="displayToast1"/>
@@ -258,13 +255,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cry"
+                    android:text="@string/cry"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
 
                 <Button
                     android:id="@+id/Btn6"
-                    android:text="Like"
+                    android:text="@string/like"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:onClick="displayToast1"/>

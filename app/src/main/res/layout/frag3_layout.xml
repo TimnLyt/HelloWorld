@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.core.widget.NestedScrollView xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="fill_parent"
     android:layout_width="match_parent"
     android:fillViewport="true"
 
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:gravity="center_horizontal"
         android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
         tools:context=".SimpleFirebaseExample">
 
         <TextView
@@ -60,14 +59,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/account_settings"
-                android:paddingRight="10dp"
-                />
+                android:paddingEnd="10dp"
+                tools:ignore="RtlSymmetry" />
 
             <Switch
                 android:id="@+id/switchAccSet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Private"
+                android:text="@string/Private"
                 tools:ignore="UseSwitchCompatOrMaterialXml" />
 
         </LinearLayout>
@@ -81,8 +80,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingRight="5dp"
-                android:text="@string/preferred_age" />
+                android:paddingEnd="5dp"
+                android:text="@string/preferred_age"
+                tools:ignore="RtlSymmetry" />
 
             <SeekBar
                 android:id="@+id/seekBarAge"
@@ -102,8 +102,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingRight="5dp"
-                android:text="Preferred Distance (Miles)" />
+                android:paddingEnd="5dp"
+                android:text="@string/preferred_distance_miles"
+                tools:ignore="RtlSymmetry" />
 
             <SeekBar
                 android:id="@+id/seekBarDistance"
